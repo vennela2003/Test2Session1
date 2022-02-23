@@ -11,21 +11,21 @@ void input(float *x1,float *y1,float *x2,float *y2)
   printf("enter the y2 value\n");
   scanf("%f",y2);
 }
-void find_distance(float x1, float y1, float x2, float y2,float *area)
+void find_distance(float x1, float y1, float x2, float y2,float *distance)
 {
 
-  *area=sqrt(pow(x2-x1,2)+pow(y2-y1,2));
+  *distance=sqrt(pow(x2-x1,2)+pow(y2-y1,2));
 }
-void output(float x1, float y1,float x2, float y2, float area)
+void output(float x1, float y1,float x2, float y2, float distance)
 {
-  printf("distance between two points is %f",area);
+  printf("distance between two points is %f",distance);
 }
 int main()
 {
   float x1,y1,x2,y2;
   input(&x1,&y1,&x2,&y2);
-  float area;
-  find_distance(x1,y1,x2,y2,&area);
-  output(x1,y1,x2,y2,area);
+  float distance;
+  find_distance(x1,y1,x2,y2,&distance);
+  output(x1,y1,x2,y2,distance);
   return 0;
 }
