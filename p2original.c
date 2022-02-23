@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 void input_triangle(float *x1, float *y1, float *x2, float *y2, float *x3, float *y3)
 {
   printf("enter the first point\n");
@@ -15,8 +16,18 @@ int is_triangle(float x1, float y1, float x2, float y2,float x3, float y3)
   }
 void output(float x1, float y1, float x2, float y2,float x3, float y3, int istriangle)
 {
-  if( istriangle== 1)
-    printf(" the given (%f,%f),(%f,%f) and (%f,%f) is a triangle\n",&x1,&y1,&x2,&y2,&x3,&y3);
+  if( istriangle == 1)
+    printf(" the points (%f,%f),(%f,%f) and (%f,%f) is a triangle\n",x1,y1,x2,y2,x3,y3);
   else
-    printf(" the given (%f,%f),(%f,%f) and (%f,%f)is not  a triangle\n",&x1,&y1,&x2,&y2,&x3,&y3);
+    printf(" the points (%f,%f),(%f,%f) and (%f,%f)is not  a triangle\n",x1,y1,x2,y2,x3,y3);
+}
+int main()
+{
+  float x1,y1,x2,y2,x3,y3;
+  int ist;
+  input_triangle(&x1,&y1,&x2,&y2,&x3,&y3);
+  is_triangle(x1,y1,x2,y2,x3,y3);
+  output(x1,y1,x2,y2,x3,y3,ist);
+  return 0;
+  
 }
